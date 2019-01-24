@@ -18,12 +18,12 @@ public class PrimoApplication implements CommandLineRunner {
 		SpringApplication.run(PrimoApplication.class, args);
 	}
 
-/**	@Override //ajout de données dans la bdd user
+	@Override //ajout de données dans la bdd user
 	public void run(String... args) throws Exception {
-		userRepos.save(new User("nom","jojo@moi.com"));
+		/**userRepos.save(new User("nom","jojo@moi.com"));
 		userRepos.save(new User("toto","toto@moi.com"));
 		userRepos.save(new User("lala","lala@moi.com"));
-	}
-*/
+	*/}
+
 }
 
