@@ -28,7 +28,7 @@ public class UserRestService {
 		return userRepo.findOne(id);
 	}
 	
-	
+	 
 	@RequestMapping(value="/users", method=RequestMethod.POST)
 	public User saveUser(@RequestBody User u){
 		return userRepo.save(u);
