@@ -3,6 +3,7 @@ package com.solutec.web;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +14,7 @@ import com.solutec.dao.UserRepository;
 import com.solutec.entities.User;
 
 @RestController
+@CrossOrigin("*")
 public class UserRestService {
 	
 	@Autowired
@@ -30,7 +32,7 @@ public class UserRestService {
 	
 	 
 	@RequestMapping(value="/users", method=RequestMethod.POST)
-	public User saveUser(@RequestBody User u){
+	public User saveUser( User u){
 		return userRepo.save(u);
 	}
 	
