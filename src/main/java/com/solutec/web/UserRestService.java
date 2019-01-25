@@ -32,7 +32,7 @@ public class UserRestService {
 	
 	 
 	@RequestMapping(value="/users", method=RequestMethod.POST)
-	public User saveUser( User u){
+	public User saveUser(/**@RequestBody*/ User u){ //J'ai mis en commentaire requestbody car ne fonctionne en méthode post avec ajax jquery
 		return userRepo.save(u);
 	}
 	
